@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Enter Information</a>
+        <a href="view.html">Update an Employee</a>
+    </nav>
+    <div id="container">
+        <h1>Update an employee.</h1>
+        <nav>
+            <a href="#">Enter employee information</a>
+            <a href="view.html">Look at Employee</a>
+        </nav>
+        <form action="/updateEmpl" method="post">
+            <span id="err" style="color: red;"></span>
+            <br>
+            <label for="ufname">First Name: </label>
+            <br>
+            <input type="text" name="ufname" id="EmplEntry">
+            <br>
+            <label for="ulname">First Name: </label>
+            <br>
+            <input type="text" name="ulname" id="EmplEntry">
+            <br>
+            <label for="udropd">Department: </label><br>
+            <select name="dropd" id="udropdown">
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+            </select>
+            
+            
+            <br>
+            <label for="usdate">Start Date: </label>
+            <br>
+            <input type="date" name="usdate" id="startDate">
+            <br>
+            <label for="utitle">Title: </label>
+            <br>
+            <input type="text" name="utitle" id="jTitle">
+            <br>
+            <label for="usal">Salary: </label>
+            <br>
+            <input type="text" name="usal" id="salary">
+            <br>
+            <button type="submit">Update Employee</button>
+        </form>
+    </div>
+</body>
+</html>

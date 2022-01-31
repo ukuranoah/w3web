@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Enter an employee.</h1>
+        <nav>
+            <a href="#">Enter employee information</a>
+            <a href="view.html">Look at Employee</a>
+        </nav>
+        <form action="/saveEmpl" method="post">
+            <span id="err" style="color: red;"></span>
+            <br>
+            <label for="fname">First Name: </label>
+            <br>
+            <input type="text" name="fname" id="EmplEntry">
+            <br>
+            <label for="lname">First Name: </label>
+            <br>
+            <input type="text" name="lname" id="EmplEntry">
+            <br>
+            <label for="dropd">Department: </label><br>
+            <select name="dropd" id="dropdown">
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+            </select>
+            
+            
+            <br>
+            <label for="sdate">Start Date: </label>
+            <br>
+            <input type="date" name="sdate" id="startDate">
+            <br>
+            <label for="title">Title: </label>
+            <br>
+            <input type="text" name="title" id="jTitle">
+            <br>
+            <label for="sal">Salary: </label>
+            <br>
+            <input type="text" name="sal" id="salary">
+            <br>
+            <button type="submit">Submit Employee</button>
+        </form>
+    </div>
+</body>
+</html>

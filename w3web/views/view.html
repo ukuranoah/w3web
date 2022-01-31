@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="container">
+    <h1>Here is your list of employees</h1>
+    <nav>
+        <a href="index.html">Enter Information</a>
+        <a href="view.html">Look at Employees</a>
+    </nav>
+    <script>
+        fetch('/getData').then((empls)=>{
+                empls.json().then((theEmpls)=>{
+                    for(let empl of theEmpls.empl){
+                        let element = document.createElement('p')
+                        element.innerHTML = "First name: " + empl.fname + " Last name: " + empl.lname + " Department: " + empl.dropd + " Job title: " + empl.title + " Salary: $" + empl.sal + " <br>Start date: " + empl.sdate + "<br>"
+                        document.getElementById('container').append(element)
+                        //add delete button 
+                        let deleteButton = document.createElement('button')
+                        deleteButton.innerText = 'Delete Entry'
+                        deleteButton.addEventListener('click', function deleteEmpl(){
+                            location.reload()
+                            fetch('/deleteEmpl',{
+                                method:'POST',
+                                headers:{
+                                    'Content-type':'application/json'
+                                },
+                                body:JSON.stringify({
+                                    _id:empl._id,
+                                    empl:empl.empl
+                                })
+                            })
+                        })
+                        element.appendChild(deleteButton)
+
+
+                        let updateButton = document.createElement('button')
+                        updateButton.innerText = 'Update Entry'
+                        updateButton.addEventListener('click', function updateEmpl(){
+                            location.reload()
+                            fetch('/updateEmpl',{
+                                method:'POST',
+                                headers:{
+                                    'Content-type':'application/json'
+                                },
+                                body:JSON.stringify({
+                                    _id:empl._id,
+                                    empl:empl.empl
+                                })
+                            })
+                        })
+                        element.appendChild(updateButton)
+                    }
+                })
+            })
+    </script>
+</body>
+</html>
