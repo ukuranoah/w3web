@@ -9,7 +9,7 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(express.json())
 
-
+ 
 
 mongoose.connect('mongodb://localhost:27017/lab3web',{
     useNewURLParser:true
