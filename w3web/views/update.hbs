@@ -1,0 +1,41 @@
+<body>
+    
+    <div id="container">
+        <h1>Update an employee.</h1>
+        
+        <form action="/update/{{_id}}" method="post">
+            <span id="err" style="color: red;"></span>
+            <br>
+            <label for="fname">First Name: </label>
+            <br>
+            <input type="text" name="fname" id="EmplEntry" value="{{fname}}">
+            <br>
+            <label for="lname">Last Name: </label>
+            <br>
+            <input type="text" name="lname" id="EmplEntry" value="{{lname}}">
+            <br>
+            <label for="udropd">Department: </label><br>
+            <select name="dropd" id="udropdown">
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+            </select>
+            
+            
+            <br>
+            <label for="sdate">Start Date: </label>
+            <br>
+            <input type="date" name="sdate" id="startDate" value="{{dateFormat sdate}}">
+            <br>
+            <label for="title">Title: </label>
+            <br>
+            <input type="text" name="title" id="jTitle" value="{{title}}">
+            <br>
+            <label for="sal">Salary: </label>
+            <br>
+            <input type="text" name="sal" id="salary" value="{{sal}}">
+            <br>
+            <button type="submit">Update Employee</button>
+        </form>
+    </div>
+</body>

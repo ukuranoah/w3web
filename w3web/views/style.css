@@ -1,0 +1,22 @@
+#container {
+  background-color: maroon;
+  width: fit-content;
+  border: 3px solid darkblue;
+}
+label {
+  font-weight: bolder;
+  color: white;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+a:checked {
+  color: green;
+}
+p {
+  color: white;
+  font-weight: bold;
+}
